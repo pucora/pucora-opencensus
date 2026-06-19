@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"contrib.go.opencensus.io/exporter/prometheus"
-	opencensus "github.com/pucora/velonetics-opencensus/v2"
+	opencensus "github.com/pucora/pucora-opencensus/v2"
 	prom "github.com/prometheus/client_golang/prometheus"
 )
 

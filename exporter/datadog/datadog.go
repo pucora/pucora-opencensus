@@ -5,7 +5,7 @@ import (
 	"errors"
 
 	datadog "github.com/DataDog/opencensus-go-exporter-datadog"
-	opencensus "github.com/pucora/velonetics-opencensus/v2"
+	opencensus "github.com/pucora/pucora-opencensus/v2"
 )
 
 func init() {

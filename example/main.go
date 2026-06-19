@@ -12,16 +12,16 @@ import (
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/logging"
 	"github.com/pucora/lura/v2/proxy"
-	veloneticsgin "github.com/pucora/lura/v2/router/gin"
+	pucoragin "github.com/pucora/lura/v2/router/gin"
 	"github.com/pucora/lura/v2/transport/http/client"
 
-	opencensus "github.com/pucora/velonetics-opencensus/v2"
-	"github.com/pucora/velonetics-opencensus/v2/exporter"
-	_ "github.com/pucora/velonetics-opencensus/v2/exporter/influxdb"
-	_ "github.com/pucora/velonetics-opencensus/v2/exporter/jaeger"
-	_ "github.com/pucora/velonetics-opencensus/v2/exporter/prometheus"
-	_ "github.com/pucora/velonetics-opencensus/v2/exporter/zipkin"
-	opencensusgin "github.com/pucora/velonetics-opencensus/v2/router/gin"
+	opencensus "github.com/pucora/pucora-opencensus/v2"
+	"github.com/pucora/pucora-opencensus/v2/exporter"
+	_ "github.com/pucora/pucora-opencensus/v2/exporter/influxdb"
+	_ "github.com/pucora/pucora-opencensus/v2/exporter/jaeger"
+	_ "github.com/pucora/pucora-opencensus/v2/exporter/prometheus"
+	_ "github.com/pucora/pucora-opencensus/v2/exporter/zipkin"
+	opencensusgin "github.com/pucora/pucora-opencensus/v2/router/gin"
 	"github.com/pucora/lura/v2/transport/http/server"
 )
 
@@ -70,12 +70,12 @@ func main() {
 	}
 
 	// setup the pucora router
-	routerFactory := veloneticsgin.NewFactory(veloneticsgin.Config{
+	routerFactory := pucoragin.NewFactory(pucoragin.Config{
 		Engine:         gin.Default(),
 		ProxyFactory:   opencensus.ProxyFactory(proxy.NewDefaultFactory(opencensus.BackendFactory(bf), logger)),
 		Middlewares:    []gin.HandlerFunc{},
 		Logger:         logger,
-		HandlerFactory: opencensusgin.New(veloneticsgin.EndpointHandler),
+		HandlerFactory: opencensusgin.New(pucoragin.EndpointHandler),
 		RunServer:      server.RunServer,
 	})
 

@@ -36,8 +36,8 @@ Example
 
 	$ go build
 	$ gcvis ./example -l DEBUG -d -p 8080 -c pucora.json -name gateway0 -s 9091
-	$ gcvis ./example -l DEBUG -d -p 8081 -c velonetics_2.json -name gateway1 -s 9092
-	$ gcvis ./example -l DEBUG -d -p 8082 -c velonetics_3.json -name gateway2 -s 9093
+	$ gcvis ./example -l DEBUG -d -p 8081 -c pucora_2.json -name gateway1 -s 9092
+	$ gcvis ./example -l DEBUG -d -p 8082 -c pucora_3.json -name gateway2 -s 9093
 
 
 

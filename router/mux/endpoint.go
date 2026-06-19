@@ -3,7 +3,7 @@ package mux
 import (
 	"net/http"
 
-	opencensus "github.com/pucora/velonetics-opencensus/v2"
+	opencensus "github.com/pucora/pucora-opencensus/v2"
 	"github.com/pucora/lura/v2/config"
 	"github.com/pucora/lura/v2/proxy"
 	"github.com/pucora/lura/v2/router/mux"

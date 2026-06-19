@@ -7,4 +7,4 @@ Pucora has traditionally offered its telemetry integration through this OpenCens
 
 Due to a change in the industry, the original authors no longer maintain the OpenCensus integration, and all efforts are focused on OpenTelemetry.
 
-See [velonetics-otel](https://github.com/pucora/velonetics-otel)
+See [pucora-otel](https://github.com/pucora/pucora-otel)

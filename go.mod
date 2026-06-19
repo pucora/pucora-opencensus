@@ -1,4 +1,4 @@
-module github.com/pucora/velonetics-opencensus/v2
+module github.com/pucora/pucora-opencensus/v2
 
 go 1.25.0
 
